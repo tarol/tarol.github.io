@@ -12,11 +12,15 @@
 
     @keyframes move {
       0% {
-        transform: translateX(100%)
+        -webkit-transform: translateX(0px)
+      }
+
+      50% {
+        -webkit-transform: translateX(10px)
       }
 
       100% {
-        transform: translateX(-100%)
+        -webkit-transform: translateX(0px)
       }
     }
 
@@ -29,8 +33,7 @@
       position: relative;
       padding: 16px;
       margin: 0;
-      animation: move 5s linear infinite;
-      transform: translateX(100%);
+      animation: move 1s linear infinite;
     }
 
     h1 {
@@ -52,25 +55,34 @@
     }
 
     li {
-      display: flex;
-      align-items: center;
-      border-bottom: 1px solid #eee;
-      padding: 6px;
-      font-size: 16px;
+      position: relative;
+      height: 30px;
+      overflow: hidden;
+      border-top: 1px dotted #ccc;
+      padding: 5px 20px 5px 40px;
+      font-size: 20px;
     }
 
     img {
       width: 30px;
       height: 30px;
+      position: absolute;
+      left: 3px;
+      top: 4px;
       border: 1px solid #ccc;
-      margin-right: 6px;
     }
 
     .product-name {
-      flex: 1;
+      position: absolute;
+      font-size: 14px;
+      left: 42px;
+      top: 10px;
     }
 
     .product-price {
+      position: absolute;
+      right: 5px;
+      top: 4px;
       font-size: 12px;
       color: #999;
     }
