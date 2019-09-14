@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    li {
+      transform: translate3d(0, 0, 0);
+    }
+
+  </style>
+</head>
+
+<body>
+  <button>Add one li</button>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li class="li3">3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul>
+  <script>
+    let n = 1;
+    const btn = document.querySelector("button");
+    btn.addEventListener("click", function () {
+      const li3 = document.querySelector(".li3");
+      const item = document.createElement("li");
+      item.innerHTML = "insert" + n;
+      n++;
+      li3.parentNode.insertBefore(item, li3);
+    });
+  </script>
+</body>
+
+</html>
