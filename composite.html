@@ -7,29 +7,40 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <style>
+    button {
+      background: transparent;
+      border: 1px solid #888;
+      padding: 6px 10px;
+    }
+    button:focus {
+      outline: none;
+    }
+    button:active {
+      outline: none;
+    }
     li {
       transform: translate3d(0, 0, 0);
     }
-
   </style>
 </head>
 
 <body>
-  <button>Add one li</button>
+  <button>Add a reference</button>
   <ul>
-    <li>1</li>
-    <li>2</li>
-    <li class="li3">3</li>
-    <li>4</li>
-    <li>5</li>
+    <li>Log of /releases/28.0.1463.0/DEPS.</li>
+    <li>Blink: A rendering engine for the Chromium project.</li>
+    <li class="li3">Google going its own way, forking WebKit rendering engine.</li>
+    <li>The Evolution of the Web, in a Blink. The New Yorker.</li>
+    <li>Kobie, Nicole. Firefox 23 finally kills "blink" tag.</li>
   </ul>
   <script>
-    let n = 1;
+    const insertText = ['Hello Blink.', 'Siracusa, John. Hypercritical: Code Hard or Go Home.', 'Google Forks WebKit And Launches Blink, A New Rendering Engine That Will Soon Power Chrome And Chrome OS.', 'Google parts ways with Apple over WebKit, launches Blink.']
+    let n = 0;
     const btn = document.querySelector("button");
     btn.addEventListener("click", function () {
       const li3 = document.querySelector(".li3");
       const item = document.createElement("li");
-      item.innerHTML = "insert" + n;
+      item.innerHTML = insertText[n % 4];
       n++;
       li3.parentNode.insertBefore(item, li3);
     });
