@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button>click</button>
+  <script>
+    function fn() {
+      const height = document.body.offsetHeight;
+      for(let i = 0; i < 100; i++) {
+        document.body.appendChild(document.createElement('p'))
+        console.log(height)
+      }
+    }
+    document.querySelector('button').addEventListener('click', fn)
+  </script>
+</body>
+</html>
