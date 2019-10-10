@@ -10,7 +10,10 @@
   <button>click</button>
   <script>
     function fn() {
-      console.log(document.body.offsetHeight)
+      for(let i = 0; i < 100; i++) {
+        document.body.appendChild(document.createElement('p'))
+        console.log(document.body.offsetHeight)
+      }
     }
     document.querySelector('button').addEventListener('click', fn)
   </script>
